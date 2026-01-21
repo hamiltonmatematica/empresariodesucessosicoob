@@ -35,24 +35,24 @@ export const Testimonials: React.FC = () => {
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
                     {testimonials.map((item, index) => (
-                        <div key={index} className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl relative backdrop-blur-sm shadow-[0_0_30px_rgba(0,0,0,0.2)] flex flex-col">
+                        <div key={index} className="bg-white/5 border border-white/10 p-5 md:p-6 rounded-2xl relative backdrop-blur-sm shadow-[0_0_30px_rgba(0,0,0,0.2)] flex flex-col">
                             <Quote className="absolute top-6 left-6 text-brand-neon/20 w-12 h-12 -z-10" />
 
                             <div className="relative z-10 flex-1">
-                                <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 italic">
+                                <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4 italic">
                                     "{item.content}"
                                 </p>
 
-                                <div className="flex items-center gap-4 border-t border-white/10 pt-6 mt-auto">
+                                <div className="flex items-center gap-4 border-t border-white/10 pt-4 mt-auto">
                                     {/* Placeholder for avatar if needed
                   <div className="w-12 h-12 rounded-full bg-brand-neon/20 flex items-center justify-center text-brand-neon font-bold text-xl">
                     {item.author.charAt(0)}
                   </div>
                   */}
                                     <div>
-                                        <h4 className="text-white font-bold text-lg">{item.author}</h4>
+                                        <h4 className="text-white font-bold text-base">{item.author}</h4>
                                         <p className="text-brand-neon text-xs uppercase tracking-wider">{item.role}</p>
                                     </div>
                                 </div>
