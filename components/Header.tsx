@@ -27,10 +27,17 @@ export const Header: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-dark/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-brand-neon/10 py-2' : 'bg-transparent py-4'
         }`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <div className="font-serif font-bold text-xl md:text-2xl tracking-tighter leading-none text-brand-neon drop-shadow-[0_0_5px_rgba(211, 225, 51,0.5)] cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          EMPRESÁRIOS<br />
-          <span className="text-white text-sm md:text-base tracking-widest font-sans font-light">DE SUCESSO</span>
+      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center relative">
+        <div className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <div className="font-serif font-bold text-xl md:text-2xl tracking-tighter leading-none text-brand-neon drop-shadow-[0_0_5px_rgba(211, 225, 51,0.5)]">
+            EMPRESÁRIOS<br />
+            <span className="text-white text-sm md:text-base tracking-widest font-sans font-light">DE SUCESSO</span>
+          </div>
+        </div>
+
+        {/* Center Logo - Sicoob (Visible on Scroll) */}
+        <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+          <img src="/sicoob.png" alt="Sicoob" className="h-8 md:h-10 w-auto object-contain" />
         </div>
 
         {/* Desktop Nav */}
