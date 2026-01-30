@@ -19,9 +19,9 @@ export const SPEAKERS: Speaker[] = [
 export const AGENDA_DAY_1: AgendaItem[] = [
   {
     time: "19h00",
-    title: "2026 PARA LÍDERES",
+    title: "COMO VENDER MAIS EM UM NOVO CENÁRIO DE CONSUMO",
     speaker: "Diego e Fred",
-    description: "Análise estratégica para um ano com Eleições, Copa, barulho e distração. Exclusivo para executivos e donos de empresas."
+    description: "É o time entendendo o novo cenário do consumo, como vender melhor, como usar tecnologia, redes sociais e postura para se relacionar com o cliente de hoje."
   },
   {
     time: "20h30",
