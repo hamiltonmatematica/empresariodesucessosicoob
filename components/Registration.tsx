@@ -58,8 +58,15 @@ export const Registration: React.FC = () => {
                 </li>
               </ul>
 
-              <div className="mb-6">
-                <p className="text-3xl font-bold text-white mb-2">R$ 499,90</p>
+              <div className="mb-6 space-y-2">
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-gray-400">PÚBLICO GERAL</span>
+                  <span className="text-gray-400 line-through decoration-red-500/50 decoration-2">R$ 99,00</span>
+                </div>
+                <div className="flex justify-between items-center bg-brand-neon/10 p-2 rounded-lg border border-brand-neon/20">
+                  <span className="text-brand-neon font-bold text-sm">CORRENTISTA CREDINOR</span>
+                  <span className="text-brand-neon font-bold text-lg">R$ 49,00</span>
+                </div>
               </div>
 
               <Button
@@ -89,7 +96,7 @@ export const Registration: React.FC = () => {
               <ul className="space-y-3 mb-6 text-left">
                 <li className="flex items-start gap-2 text-white text-sm font-medium">
                   <CheckCircle2 size={16} className="text-brand-neon mt-0.5 flex-shrink-0" />
-                  <span>✨ TUDO do Dia 01 (Palestra + Autógrafos)</span>
+                  <span>TUDO do Dia 01</span>
                 </li>
                 <li className="flex items-start gap-2 text-white text-sm font-medium">
                   <CheckCircle2 size={16} className="text-brand-neon mt-0.5 flex-shrink-0" />
@@ -108,11 +115,11 @@ export const Registration: React.FC = () => {
               <div className="mb-6 space-y-2">
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-gray-400">PÚBLICO GERAL</span>
-                  <span className="text-gray-400 line-through decoration-red-500/50 decoration-2">R$ 997,00</span>
+                  <span className="text-gray-400 line-through decoration-red-500/50 decoration-2">R$ 499,00</span>
                 </div>
                 <div className="flex justify-between items-center bg-brand-neon/10 p-2 rounded-lg border border-brand-neon/20">
                   <span className="text-brand-neon font-bold text-sm">CORRENTISTA CREDINOR</span>
-                  <span className="text-brand-neon font-bold text-lg">R$ 697,00</span>
+                  <span className="text-brand-neon font-bold text-lg">R$ 399,00</span>
                 </div>
               </div>
 
