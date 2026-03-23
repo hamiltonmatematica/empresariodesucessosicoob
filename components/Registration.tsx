@@ -5,7 +5,7 @@ import { RegistrationModal } from './RegistrationModal';
 
 export const Registration: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedTicket, setSelectedTicket] = useState<'day1' | 'day1-2'>('day1-2');
+  const [selectedTicket, setSelectedTicket] = useState<'day1-2'>('day1-2');
 
   const handleOpenModal = (ticketType: 'day1' | 'day1-2') => {
     setSelectedTicket(ticketType);
@@ -31,52 +31,7 @@ export const Registration: React.FC = () => {
           </p>
 
           {/* Ticket Options Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-10">
-
-            {/* Day 1 Only Option */}
-            <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-brand-neon/50 transition-all duration-300 group flex flex-col">
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-brand-deep/20 text-brand-deep text-xs font-bold rounded-full mb-3">
-                  DIA 01
-                </span>
-                <h3 className="text-2xl font-bold text-white mb-2">Palestra + Autógrafos</h3>
-                <p className="text-gray-400 text-sm mb-4">Experiência noturna exclusiva</p>
-              </div>
-
-              <ul className="space-y-3 mb-6 text-left flex-grow">
-                <li className="flex items-start gap-2 text-gray-300 text-sm">
-                  <CheckCircle2 size={16} className="text-brand-neon mt-0.5 flex-shrink-0" />
-                  <span>Palestra com Diego e Fred</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-300 text-sm">
-                  <CheckCircle2 size={16} className="text-brand-neon mt-0.5 flex-shrink-0" />
-                  <span>Sessão de Autógrafos</span>
-                </li>
-                <li className="flex items-start gap-2 text-gray-300 text-sm">
-                  <CheckCircle2 size={16} className="text-brand-neon mt-0.5 flex-shrink-0" />
-                  <span>Networking exclusivo</span>
-                </li>
-              </ul>
-
-              <div className="mb-6 space-y-2">
-                <div className="flex justify-between items-center text-sm">
-                  <span className="text-gray-400">PÚBLICO GERAL</span>
-                  <span className="text-gray-400 line-through decoration-red-500/50 decoration-2">R$ 99,00</span>
-                </div>
-                <div className="flex justify-between items-center bg-brand-neon/10 p-2 rounded-lg border border-brand-neon/20">
-                  <span className="text-brand-neon font-bold text-sm">CORRENTISTA CREDINOR</span>
-                  <span className="text-brand-neon font-bold text-lg">R$ 49,00</span>
-                </div>
-              </div>
-
-              <Button
-                onClick={() => handleOpenModal('day1')}
-                variant="outline"
-                className="w-full group-hover:shadow-[0_0_20px_rgba(211, 225, 51,0.3)]"
-              >
-                GARANTIR DIA 01
-              </Button>
-            </div>
+          <div className="max-w-md mx-auto mb-10">
 
             {/* Day 1+2 Option */}
             <div className="bg-gradient-to-br from-brand-neon/10 to-brand-deep/10 border-2 border-brand-neon rounded-2xl p-6 relative overflow-hidden group shadow-[0_0_30px_rgba(211, 225, 51,0.15)] flex flex-col">
@@ -87,20 +42,17 @@ export const Registration: React.FC = () => {
 
               <div className="mb-4 mt-4">
                 <span className="inline-block px-3 py-1 bg-brand-neon/20 text-brand-neon text-xs font-bold rounded-full mb-3">
-                  DIA 01 + 02
+                  IMERSÃO
                 </span>
-                <h3 className="text-2xl font-bold text-white mb-2">Imersão Completa</h3>
-                <p className="text-gray-300 text-sm mb-4">Experiência transformadora de 2 dias</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Imersão</h3>
+                <p className="text-gray-300 text-sm mb-4">Experiência transformadora</p>
               </div>
 
               <ul className="space-y-3 mb-6 text-left flex-grow">
+                
                 <li className="flex items-start gap-2 text-white text-sm font-medium">
                   <CheckCircle2 size={16} className="text-brand-neon mt-0.5 flex-shrink-0" />
-                  <span>TUDO do Dia 01</span>
-                </li>
-                <li className="flex items-start gap-2 text-white text-sm font-medium">
-                  <CheckCircle2 size={16} className="text-brand-neon mt-0.5 flex-shrink-0" />
-                  <span>Imersão completa Dia 02</span>
+                  <span>Imersão completa</span>
                 </li>
                 <li className="flex items-start gap-2 text-white text-sm font-medium">
                   <CheckCircle2 size={16} className="text-brand-neon mt-0.5 flex-shrink-0" />
@@ -127,7 +79,7 @@ export const Registration: React.FC = () => {
                 onClick={() => handleOpenModal('day1-2')}
                 className="w-full shadow-neon animate-pulse hover:animate-none"
               >
-                GARANTIR DIA 01 + 02
+                GARANTIR IMERSÃO
               </Button>
             </div>
           </div>
